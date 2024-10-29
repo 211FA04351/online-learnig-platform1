@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #388E3C;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            display: none;
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #fff;
+            margin: 20px auto;
+            max-width: 1200px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #388E3C;
+        }
+
+        /* Home Page */
+        .home-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .home-content div {
+            flex: 1;
+            min-width: 300px;
+            margin: 20px;
+        }
+
+        .home-content img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .home-content img:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #388E3C;
+        }
+
+        /* Courses */
+        .courses-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .course {
+            flex: 1 1 45%;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .course img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #81C784;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Learning Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showSection('home')">Home</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('register')">Register</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('login')">Login</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('courses')">Courses</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sections for Home, Register, Login, Courses, and Contact Us -->
+    <section id="home" class="active">
+        <h2>Welcome to the Future of Learning</h2>
+        <div class="home-content">
+            <!-- Home content here -->
+        </div>
+    </section>
+
+    <section id="register">
+        <h2>Create Your Account</h2>
+        <form>
+            <!-- Registration form here -->
+        </form>
+    </section>
+
+    <section id="login">
+        <h2>Login to Your Account</h2>
+        <form>
+            <!-- Login form here -->
+        </form>
+    </section>
+
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <div class="courses-content">
+            <!-- Courses content here -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <!-- Contact form here -->
+        </form>
+    </section>
+
+    <!-- JavaScript for section switching -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
+</body>
+</html>
